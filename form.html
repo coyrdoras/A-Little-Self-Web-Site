@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #dfdfdf;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      #survey-form {
+        background: #eeeeee;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Ölçülərin düzgün qalması üçün */
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      #submit {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #submit:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Welcome the survey form.</p>
+
+    <form id="survey-form">
+      <label id="name-label" for="username">Name:</label>
+      <input type="text" id="username" name="username" placeholder="Name" required /><br />
+      <label id="email-label" for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required /><br />
+      <label id="number-label" for="number">Age:</label>
+      <input type="number" id="number" name="number" min="1" max="99" placeholder="Age" /><br /><br />
+
+      <p>Which travel do you like?</p>
+      <select id="dropdown" required>
+        <option disabled selected value="">Choose one option</option>
+        <option value="adventure">Adventure</option>
+        <option value="relax">Relax</option>
+      </select>
+
+      <p>What is your gender?</p>
+      <label> <input type="radio" name="gender" value="male" />Male <input type="radio" name="gender" value="female" />Female </label>
+      <p>Did you like the travel?</p>
+      <label> <input type="radio" name="didyoulike" value="Yes" />Yes <input type="radio" name="didyoulike" value="No" />No </label>
+
+      <p>Which country did you travel?</p>
+      <label><input type="checkbox" name="visited" value="Turkiye" />Turkiye</label>
+      <label><input type="checkbox" name="visited" value="Georgia" />Georgia</label>
+      <label><input type="checkbox" name="visited" value="Italy" />Italy</label><br /><br />
+      <p>Your suggestions and complains:</p>
+      <textarea id="comments" placeholder="Write your suggestions and complains here..."></textarea><br /><br />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
